@@ -27,3 +27,41 @@ Number of non-survivors (red)
 Question 4: Analyzing Survival by Age
 Result: The average age of survivors was about 28.34 years.
 
+Activity 2:
+
+1. Loading the Dataset
+You started by importing necessary libraries and loading titanic.csv:
+
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv("titanic.csv")
+Then, you previewed the dataset using .head() and explored structure with .info() and .describe().
+
+2. Understanding the Dataset
+What you discovered:
+
+891 rows, 12 columns
+Data types: Mix of numerical (Age, Fare, etc.) and categorical (Sex, Embarked)
+Missing values:
+Age: 177 missing
+Cabin: 687 missing (most of it)
+Embarked: 2 missing
+
+3. Handling Missing Data
+You applied standard data-cleaning practices:
+
+Column	Action Taken
+Age	Filled missing values with median
+Cabin	Dropped (too many missing values)
+Embarked	Filled with most common value (mode)
+
+4. No duplicates were found, which means your dataset was already clean in that aspect.
+
+
+5. Renamed all columns to lowercase for consistency.
+Saved the cleaned dataset as titanic_cleaned.csv.
+
+6. Most passengers were aged 20–40 years, helping understand the ship’s demographics.
+
+
+
